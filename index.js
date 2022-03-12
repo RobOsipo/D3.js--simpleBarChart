@@ -13,14 +13,14 @@
      .data(dataset)
      .enter()
      .append("rect")
-     .attr("y", function(d) {
+     .attr("y", (d) => {
           return svgHeight - d 
      })
-     .attr("height", function(d) { 
+     .attr("height", (d) => { 
          return d; 
      })
      .attr("width", barWidth - barPadding)
-     .attr("transform", function (d, i) {
-         var translate = [barWidth * i, 0]; 
+     .attr("transform", (d, i) => {
+         let translate = [barWidth * i, 0]; 
          return "translate("+ translate +")";
      });
